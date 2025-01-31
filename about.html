@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - TEAM ANONYMOUS INDIA</title>
+
+    <!-- Importing Professional Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            background: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        /* Welcome Message Styling */
+        .welcome-message {
+            font-size: 1.5rem;
+            color: #00bcd4;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+            z-index: 20;
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Content Styling */
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            color: #00bcd4;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #00bcd4;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 40px;
+        }
+
+        .footer {
+            font-size: 14px;
+            margin-top: 50px;
+            color: #888;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Message with Visitor IP -->
+    <div class="welcome-message" id="welcomeMessage">Welcome, Loading...</div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>About TEAM ANONYMOUS INDIA</h1>
+
+        <p>We specialize in CP Prediction and various technological advancements. Our goal is to provide AI-driven prediction systems for CP platforms and offer cutting-edge tools to our users.</p>
+
+        <h2>15 CP Prediction Rules</h2>
+        <p>Here are 15 prediction rules followed by our CP Prediction system:</p>
+        <ol>
+            <li><strong>Tiranga:</strong> If the sum of digits is even, predict Red. Otherwise, Green.</li>
+            <li><strong>72 Lottery:</strong> If the first digit is greater than 5, predict Green. Otherwise, Red.</li>
+            <li><strong>82 Lottery:</strong> If the sum of digits is greater than 15, predict Green. Otherwise, Red.</li>
+            <li><strong>BigDaddy:</strong> If the average of digits is even, predict Red. Otherwise, Green.</li>
+            <li><strong>ColorBoss:</strong> If the second digit is greater than 3, predict Green. Otherwise, Red.</li>
+            <li><strong>RoyalPredict:</strong> If the sum of digits is divisible by 3, predict Green. Otherwise, Red.</li>
+            <li><strong>Lucky999:</strong> If the third digit is even, predict Red. Otherwise, Green.</li>
+            <li><strong>GoldenWin:</strong> If the sum of digits is divisible by 4, predict Green. Otherwise, Red.</li>
+            <li><strong>HexaBet:</strong> If the sum of digits is divisible by 5, predict Red. Otherwise, Green.</li>
+            <li><strong>JackpotGuru:</strong> If the first and second digits are equal, predict Green. Otherwise, Red.</li>
+            <li><strong>BetMaster:</strong> If the second and third digits are equal, predict Red. Otherwise, Green.</li>
+            <li><strong>SpinKings:</strong> If the average of digits is greater than 4, predict Green. Otherwise, Red.</li>
+            <li><strong>FortunePlay:</strong> If the third digit is greater than 5, predict Green. Otherwise, Red.</li>
+            <li><strong>RangMahal:</strong> If the sum of digits is divisible by 6, predict Red. Otherwise, Green.</li>
+            <li><strong>EliteColors:</strong> If the sum of the first and third digits is greater than 5, predict Green. Otherwise, Red.</li>
+        </ol>
+
+        <p class="disclaimer">⚠️ Disclaimer: This is an AI-driven CP prediction system and should not be considered as a 100% accurate prediction tool. Use at your own risk.</p>
+
+        <div class="footer">
+            <p>© TEAM ANONYMOUS INDIA | All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        // Fetch the Visitor's IP Address
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('welcomeMessage').innerHTML = `Welcome, ${data.ip} 👋`;
+            });
+    </script>
+
+</body>
+</html>

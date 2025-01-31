@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ TechnoTrends - TEAM ANONYMOUS INDIA ⚡</title>
+    
+    <!-- Importing Professional Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            background: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: linear-gradient(45deg, #121212 25%, #00bcd4 75%);
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background: #121212;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: #00bcd4;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #00bcd4;
+            color: black;
+        }
+
+        /* Main Content Section */
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 35px rgba(0, 188, 212, 0.7);
+            display: inline-block;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Welcome Message Styling */
+        .welcome-message {
+            font-size: 1.5rem;
+            color: red;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+            z-index: 20;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Form Elements */
+        select, input, button {
+            padding: 18px 28px;
+            font-size: 18px;
+            background: #00bcd4;
+            color: white;
+            border: 2px solid #00bcd4;
+            cursor: pointer;
+            margin: 15px;
+            transition: 0.3s ease-in-out;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
+            outline: none;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        button:hover, select:hover, input:hover {
+            background: #0097a7;
+            color: #000;
+            box-shadow: 0 0 25px rgba(0, 188, 212, 1);
+        }
+
+        /* Result Styling */
+        #result {
+            margin-top: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00bcd4;
+            text-shadow: 0px 0px 20px #00bcd4;
+        }
+
+        /* Lightning Effect Styling */
+        .lightning {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 40%;
+            left: 0;
+            display: none;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.7), transparent);
+            z-index: 5;
+        }
+
+        /* Footer Styling */
+        footer {
+            font-size: 14px;
+            margin-top: 30px;
+            color: #888;
+            z-index: 10;
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Animation Effect for Lightning */
+        @keyframes redFlash {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes greenFlash {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .redLightning {
+            background: rgba(255, 0, 0, 0.8);
+            animation: redFlash 0.5s forwards;
+        }
+
+        .greenLightning {
+            background: rgba(0, 255, 0, 0.8);
+            animation: greenFlash 0.5s forwards;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 30px;
+            }
+
+            select, input, button {
+                font-size: 16px;
+                max-width: 250px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation and Welcome IP -->
+    <header>
+        <h1>⚡ TechnoTrends ⚡</h1>
+        <div class="welcome-message" id="welcomeMessage">Welcome, Loading...</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <p>🎮 Select your CP Platform:</p>
+        <select id="platformSelect">
+            <option value="Tiranga">🇮🇳 Tiranga</option>
+            <option value="72Lottery">🎰 72 Lottery</option>
+            <option value="82Lottery">🎰 82 Lottery</option>
+            <option value="BigDaddy">👑 Big Daddy</option>
+            <option value="ColorBoss">🎨 Color Boss</option>
+            <option value="RoyalPredict">🤴 Royal Predict</option>
+            <option value="Lucky999">🍀 Lucky 999</option>
+            <option value="GoldenWin">🏆 Golden Win</option>
+            <option value="HexaBet">🔶 Hexa Bet</option>
+            <option value="JackpotGuru">🔮 Jackpot Guru</option>
+            <option value="BetMaster">🃏 Bet Master</option>
+            <option value="SpinKings">🎡 Spin Kings</option>
+            <option value="FortunePlay">🌟 Fortune Play</option>
+            <option value="RangMahal">🎭 Rang Mahal</option>
+            <option value="EliteColors">💎 Elite Colors</option>
+        </select>
+
+        <p>🔢 Enter Last Period Number (e.g., 123, 456):</p>
+        <input type="number" id="periodNumber" placeholder="Enter 3-digit period number">
+
+        <button onclick="getPrediction()">⚡ Get Prediction</button>
+
+        <div id="lightning" class="lightning"></div>
+        <div id="result"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© TEAM ANONYMOUS INDIA | All Rights Reserved</p>
+        <p>⚠️ Disclaimer: This is an AI-driven CP prediction system.</p>
+    </footer>
+
+    <script>
+        // Fetch the Visitor's IP Address
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('welcomeMessage').innerHTML = `Welcome, ${data.ip}`;
+            });
+
+        // Function to generate a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to speak the prediction
+        function speakPrediction(color) {
+            const msg = new SpeechSynthesisUtterance(color);
+            window.speechSynthesis.speak(msg);
+        }
+
+        function getPrediction() {
+            let platform = document.getElementById("platformSelect").value;
+            let periodNumber = document.getElementById("periodNumber").value;
+            let resultDiv = document.getElementById("result");
+            let title = document.getElementById("title");
+
+            if (!periodNumber || periodNumber.length !== 3) {
+                alert("⚠️ Please enter a valid 3-digit period number.");
+                return;
+            }
+
+            periodNumber = parseInt(periodNumber);
+
+            let prediction = Math.random() > 0.5 ? "Red" : "Green";  // Randomly choose Red or Green
+
+            // Show Cyberpunk Lightning Effect
+            let lightning = document.getElementById("lightning");
+            lightning.style.display = "block";
+            lightning.className = prediction === "Red" 
+                ? "lightning redLightning" 
+                : "lightning greenLightning";
+            
+            // Apply random color to the prediction
+            const randomColor = getRandomColor();
+            resultDiv.style.color = randomColor;
+
+            // Speak the prediction
+            speakPrediction(prediction);
+
+            setTimeout(() => {
+                lightning.style.display = "none";
+                resultDiv.innerHTML = `🎯 Prediction for ${platform}: <strong style="color: ${randomColor};">${prediction}</strong>`;
+                title.innerText = "🎨 Color Prediction 🎨";
+            }, 1500); // Wait until lightning effect finishes
+        }
+    </script>
+
+</body>
+</html>
